@@ -15,3 +15,14 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+#active_admin_content {
+  #sidebar .sidebar_section .select_and_search {
+    input {
+      float: left !important;
+    }
+    select {
+      width: auto;
+      margin-left: 4px;
+    }
+  }
+}
