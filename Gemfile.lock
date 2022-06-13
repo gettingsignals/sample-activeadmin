@@ -80,6 +80,10 @@ GEM
     arbre (1.5.0)
       activesupport (>= 3.0.0, < 7.1)
       ruby2_keywords (>= 0.0.2, < 1.0)
+    arctic_admin (3.3.0)
+      activeadmin (>= 1.1.0, < 3.0)
+      font-awesome-sass (~> 5.0)
+      jquery-rails
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.11.1)
@@ -109,10 +113,16 @@ GEM
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
     digest (3.1.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
     erubi (1.10.0)
     ffi (1.15.5)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
@@ -287,10 +297,12 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  arctic_admin
   bootsnap
   capybara
   debug
   devise
+  dotenv-rails
   devise-i18n
   enum_help
   importmap-rails

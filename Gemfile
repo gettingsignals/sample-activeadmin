@@ -51,6 +51,10 @@ gem "sassc-rails"
 gem 'activeadmin'
 gem 'devise'
 
+gem 'arctic_admin'
+
+gem 'dotenv-rails'
+
 gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'enum_help'

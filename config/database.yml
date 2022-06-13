@@ -13,16 +13,16 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: localhost
+  username: <%= ENV.fetch("DATABASE_USER") { "test" } %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD") { "test" } %>
+  host: <%= ENV.fetch("DATABASE_HOST") { "127.0.0.1" } %>
 
 development:
   <<: *default
   database: myapp_development
-  host: db
-  username: root
-  password: password
+  host: <%= ENV.fetch("DATABASE_HOST") { "127.0.0.1" } %>
+  username: <%= ENV.fetch("DATABASE_USER") { "test" } %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD") { "test" } %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -30,9 +30,9 @@ development:
 test:
   <<: *default
   database: myapp_test
-  host: db
-  username: root
-  password: password
+  host: <%= ENV.fetch("DATABASE_HOST") { "127.0.0.1" } %>
+  username: <%= ENV.fetch("DATABASE_USER") { "test" } %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD") { "test" } %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
