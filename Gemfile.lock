@@ -163,6 +163,14 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
+    letter_opener_web (1.4.1)
+      actionmailer (>= 3.2)
+      letter_opener (~> 1.0)
+      railties (>= 3.2)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -302,11 +310,12 @@ DEPENDENCIES
   capybara
   debug
   devise
-  dotenv-rails
   devise-i18n
+  dotenv-rails
   enum_help
   importmap-rails
   jbuilder
+  letter_opener_web (~> 1.0)
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.3)
