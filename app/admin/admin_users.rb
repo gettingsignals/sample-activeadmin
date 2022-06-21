@@ -1,6 +1,18 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
+  controller do
+    def create
+      create!
+      email = permitted_params[:email]
+      title = "登録しました"
+      name = "新規登録san"
+      ContactMailer.contact_mail(email, title, name).deliver_now
+      # super
+    end
+  end
+
+
   index do
     selectable_column
     id_column
